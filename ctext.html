@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background: #d2f8fe;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+      }
+
+      #con {
+        width: 320px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .box {
+        background: #84a5f1;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px;
+        margin: 10px;
+        background: #20bf6b;
+        color: white;
+      }
+
+      .remove {
+        background: #680113;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="con"></div>
+
+    <button onclick="addElement()">Add Element</button>
+    <button class="remove" onclick="removeElement()">Remove Element</button>
+
+    <script>
+      function addElement() {
+        const newElement = document.createElement("div");
+        newElement.innerText = prompt("Ymaa bichne uu?");
+        newElement.classList.add("box");
+        newElement.id = "12";
+        document.getElementById("con").appendChild(newElement);
+      }
+
+      function removeElement() {
+        const oldElement = document.getElementById("12");
+        oldElement.remove();
+      }
+    </script>
+  </body>
+</html>
