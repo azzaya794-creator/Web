@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Popup</title>
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .b {
+        background: rgb(255, 255, 255);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      .popup {
+        background: rgb(255, 159, 159);
+        width: 300px;
+        padding: 20px;
+        border-radius: 10%;
+        text-align: center;
+      }
+      button {
+        padding: 8px 14px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="a">Open</button>
+    <div class="b" id="b">
+      <div class="popup">
+        <h3>Popup гарлаа</h3>
+        <p>When I first started Popupsmart seven years ago, I had one simple goal, to make website popups smarter, cleaner, and more human.</p>
+        <button id="c">Alert</button>
+        <button id="d">Хаах</button>
+      </div>
+    </div>
+
+    <script>
+      const a = document.getElementById("a");
+      const b = document.getElementById("b");
+      const c = document.getElementById("c");
+      const d = document.getElementById("d");
+
+      a.onclick = function () {
+        b.style.display = "flex";
+      };
+
+      d.onclick = function () {
+        b.style.display = "none";
+      };
+
+      c.onclick = function () {
+        alert("Сайн уу");
+      };
+    </script>
+  </body>
+</html>
