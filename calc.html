@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0%;
+            padding: 0%;
+        }
+        .a {
+            background-color: gray;
+            width: auto;
+            height: auto;
+        }
+        .aswer {
+            background-color: white;
+            width: auto;
+            height: auto;
+
+        }
+        .b {
+            width: 100%;
+            height: 20% ;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b">
+    <input type="number" id="first">
+    <input type="number" id="second">
+    <p id="text" class="aswer"></p>
+    </div>
+    <button onclick="add()">+</button>
+    <button onclick="decrease()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+
+    </div>
+    <script>
+        let A;
+        function add() {
+            let a = document.getElementById("first");//ehnii too
+            let b = document.getElementById("second");//hoyordoh too
+            let numa = Number(a.value);//stringiig int bolgoh(bichigiig too bolgoj huvirgah)
+            let numb = Number(b.value);//stringiig int bolgoh(bichigiig too bolgoj huvirgah)
+            if (Number.isInteger(A)) {
+                A = A + numb;//anhnii nemeh
+            }else {
+                A = numa + numb;//olon udaa nemej boloh
+            }
+            document.getElementById("text").innerText = A;//Hariugaa p tagd oruulna text ID tai
+            document.getElementById("first").value = A;// ehnii inputiin hariugaar uurchilnu
+        }
+        function decrease() {
+            let a = document.getElementById("first");
+            let b = document.getElementById("second");
+            let numa = Number(a.value);
+            let numb = Number(b.value);
+            if (Number.isInteger(A)) {
+                A = A - numb;
+            }else {
+                A = numa - numb;
+            }
+            document.getElementById("text").innerText = A;
+            document.getElementById("first").value = A;
+        }
+        function multiply() {
+            let a = document.getElementById("first");
+            let b = document.getElementById("second");
+            let numa = Number(a.value);
+            let numb = Number(b.value);
+            if (Number.isInteger(A)) {
+                A = A * numb;
+            }else {
+                A = numa * numb;
+            }
+            document.getElementById("text").innerText = A;
+            document.getElementById("first").value = A;
+        }
+        function divide() {
+            let a = document.getElementById("first");
+            let b = document.getElementById("second");
+            let numa = Number(a.value);
+            let numb = Number(b.value);
+            if (Number.isInteger(A)) {
+                A = A / numb;
+            }else {
+                A = numa / numb;
+            }
+            document.getElementById("text").innerText = A;
+            document.getElementById("first").value = A;
+        }
+    </script>
+</body>
+</html>
