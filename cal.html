@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #88c8ff;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      .a {
+        background-color: #2f3640;
+        padding: 20px;
+        border-radius: 16px;
+        width: 300px;
+      }
+
+      .b {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+      }
+
+      .aswer {
+        width: 60px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      button {
+        width: 60px;
+        height: 45px;
+        margin: 5px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background-color: #40739e;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div class="b">
+        <input type="text" id="first" />
+        <input type="text" id="second" />
+        <p id="text" class="aswer"></p>
+      </div>
+      <button onclick="add()">+</button>
+      <button onclick="decrease()">-</button>
+      <button onclick="multiply()">*</button>
+      <button onclick="divide()">/</button>
+    </div>
+    <script>
+      let A;
+      function add() {
+        let a = document.getElementById("first");
+        let b = document.getElementById("second");
+        let numa = Number(a.value);
+        let numb = Number(b.value);
+        if (Number.isInteger(A)) {
+          A = A + numb;
+        } else {
+          A = numa + numb;
+        }
+        document.getElementById("text").innerText = A;
+        document.getElementById("first").value = A;
+      }
+      function decrease() {
+        let a = document.getElementById("first");
+        let b = document.getElementById("second");
+        let numa = Number(a.value);
+        let numb = Number(b.value);
+        if (Number.isInteger(A)) {
+          A = A - numb;
+        } else {
+          A = numa - numb;
+        }
+        document.getElementById("text").innerText = A;
+        document.getElementById("first").value = A;
+      }
+      function multiply() {
+        let a = document.getElementById("first");
+        let b = document.getElementById("second");
+        let numa = Number(a.value);
+        let numb = Number(b.value);
+        if (Number.isInteger(A)) {
+          A = A * numb;
+        } else {
+          A = numa * numb;
+        }
+        document.getElementById("text").innerText = A;
+        document.getElementById("first").value = A;
+      }
+      function divide() {
+        let a = document.getElementById("first");
+        let b = document.getElementById("second");
+        let numa = Number(a.value);
+        let numb = Number(b.value);
+        if (Number.isInteger(A)) {
+          A = A / numb;
+        } else {
+          A = numa / numb;
+        }
+        document.getElementById("text").innerText = A;
+        document.getElementById("first").value = A;
+      }
+    </script>
+  </body>
+</html>
